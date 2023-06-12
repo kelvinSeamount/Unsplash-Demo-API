@@ -7,6 +7,7 @@
 
   /*=====================FONTS=VARIABLES====================*/
   --fs--400: 1rem;
+  --fs--300:0.5rem
 
   /*=====================CONTAINER=VARIABLES====================*/
 
@@ -28,6 +29,12 @@ body {
 
 section {
   padding: 2rem 0;
+}
+
+img {
+  width: 100%;
+  display: block;
+  object-fit: contain;
 }
 
 .container {
@@ -79,11 +86,39 @@ section {
   background-color: var(--color-button);
   text-align: center;
   outline: 0;
-  display: block;
+  font-size: var(--fs--400);
+  display: none;
   border: 0;
   margin: 0 10rem;
   padding: 1rem 0.4rem;
   border-radius: 1rem;
   color: var(--color);
   cursor: pointer;
+}
+
+.container-result {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin: 2rem auto;
+  /*width: 80%;*/
+}
+
+/*=====================MEDIA=QUERIES====================*/
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--md-container-width);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: var(--md-container-width);
+  }
+  .btn-show{
+    font-size: var(--fs--400);
+    padding: 1rem 2.3rem;
+    margin: 0 7rem;
+  }
 }
