@@ -15,9 +15,22 @@ const searchImage = async function () {
 
   const data = await response.json();
 
-  /*data.results.map(function(arr){
+  data.results.map(function (arr) {
+    //creating image tag
+    const image = document.createElement("img");
+    image.src = arr.urls.small;
 
- })*/
+    //add link to image tag
+    const linkImg = document.createElement("a");
+    linkImg.href = arr.links.html;
+
+    //this opens the link in page
+    linkImg.target = "_blank";
+
+    // place img in the link
+    linkImg.appendChild(image);
+    containerResult.appendChild(linkImg);
+  });
 };
 
 searchForm.addEventListener("click", function (e) {
