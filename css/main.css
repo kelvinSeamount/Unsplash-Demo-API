@@ -107,6 +107,12 @@ img {
   width: 80%;
 }
 
+.container-result img{
+  height: 230px;
+object-fit: cover;
+border-radius: 0.3rem;
+}
+
 /*=====================MEDIA=QUERIES====================*/
 
 @media screen and (max-width: 1024px) {

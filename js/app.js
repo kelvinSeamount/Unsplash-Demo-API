@@ -13,7 +13,11 @@ const searchImage = async function () {
 
   const response = await fetch(url);
 
+  //Refresh container
   const data = await response.json();
+  if (page === 1) {
+    containerResult.innerHTML = "";
+  }
 
   data.results.map(function (arr) {
     //creating image tag
