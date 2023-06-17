@@ -130,4 +130,7 @@ border-radius: 0.3rem;
     padding: 1rem 2.3rem;
     margin: 0 7rem;
   }
+  .container-result{
+    grid-template-columns: 1fr;
+  }
 }
